@@ -11,11 +11,12 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("hellofx.fxml"));
+
+        Scene scene = new Scene(root);
         primaryStage.setTitle("Fortune Teller");
-        primaryStage.setScene(new Scene(root, 400, 300));
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);
