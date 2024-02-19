@@ -1,16 +1,33 @@
 package fortuneteller;
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 
 public class AppController {
 
     @FXML
-    private Label label;
+    private Button exitButton;
 
-    public void initialize() {
-        String javaVersion = System.getProperty("java.version");
-        String javafxVersion = System.getProperty("javafx.version");
-        label.setText("Hello, JavaFX " + javafxVersion + "\nRunning on Java " + javaVersion + ".");
+    @FXML
+    private Button infoButton;
+
+    @FXML
+    private Button fortunesButton;
+
+    @FXML
+    void fortunesButtonPressed(ActionEvent event) {
+
+    }
+
+    @FXML
+    void infoButtonPressed(ActionEvent event) {
+
+    }
+
+    @FXML
+    void exitButtonPressed(ActionEvent event) {
+        Platform.exit();
     }
 }
