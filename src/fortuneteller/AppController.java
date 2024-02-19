@@ -24,8 +24,16 @@ public class AppController {
     private Button fortunesButton;
 
     @FXML
-    void fortunesButtonPressed(ActionEvent event) {
+    void fortunesButtonPressed(ActionEvent event) throws IOException {
+        Stage stage;
+        Scene scene;
+        Parent root;
 
+        root = FXMLLoader.load(getClass().getResource("fortunes.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
