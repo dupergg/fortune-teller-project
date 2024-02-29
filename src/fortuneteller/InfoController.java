@@ -54,7 +54,7 @@ public class InfoController implements Initializable {
     // if you need to change the text for the TextArea, change it in the 
     // "infoText.txt" file in the src directory
     private void setInfoText() throws FileNotFoundException, URISyntaxException {
-        URL fileURL = getClass().getResource("infoText.txt");
+        URL fileURL = this.getClass().getResource("infoText.txt");
         File file = new File(fileURL.toURI());
         Scanner sc = new Scanner(file);
 
