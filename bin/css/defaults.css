@@ -1,0 +1,21 @@
+.first-color { 
+	background: #61bbb6; 
+}
+
+.second-color { 
+	-fx-background-color: #ad56cd; 
+}
+	
+.root { 
+	-fx-background-color: #a1dfff; 
+}
+
+.button:hover { 
+	-fx-background-color: #634fb3;
+}
+
+.button { 
+	-fx-background-color: #4a3b85;
+	-fx-background-radius: 10px; 
+	-fx-text-base-color: #ffffff;
+}

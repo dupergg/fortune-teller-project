@@ -46,6 +46,15 @@ public class InfoController implements Initializable {
             System.out.println("Error: appStyle.css not found");
         }
 
+        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
+        if (defaultCSS != null) {
+            String defCSS = defaultCSS.toExternalForm();
+            scene.getStylesheets().add(defCSS);
+
+        } else {
+            System.out.println("Error: defaults.css not found");
+        }
+
         stage.setScene(scene);
         stage.show();
     }

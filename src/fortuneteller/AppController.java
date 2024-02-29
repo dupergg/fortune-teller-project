@@ -1,7 +1,7 @@
 package fortuneteller;
 
 import java.io.IOException;
-
+import java.net.URL;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,6 +32,16 @@ public class AppController {
         root = FXMLLoader.load(getClass().getResource("fortunes.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+
+        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
+        if (defaultCSS != null) {
+            String defCSS = defaultCSS.toExternalForm();
+            scene.getStylesheets().add(defCSS);
+
+        } else {
+            System.out.println("Error: defaults.css not found");
+        }
+
         stage.setScene(scene);
         stage.show();
     }
@@ -45,6 +55,16 @@ public class AppController {
         root = FXMLLoader.load(getClass().getResource("info.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+
+        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
+        if (defaultCSS != null) {
+            String defCSS = defaultCSS.toExternalForm();
+            scene.getStylesheets().add(defCSS);
+
+        } else {
+            System.out.println("Error: defaults.css not found");
+        }
+
         stage.setScene(scene);
         stage.show();
     }
