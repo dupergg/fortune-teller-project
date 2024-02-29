@@ -1,7 +1,7 @@
 package fortuneteller;
 
 import java.io.IOException;
-
+import java.net.URL;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +12,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class FortunesController {
+
+    // to add CSS to the project for prettiness, look at this link:
+    // https://stackoverflow.com/questions/23975897/how-to-add-a-css-stylesheet-in-fxml
 
     @FXML
     private Button backButton;
@@ -25,6 +28,17 @@ public class FortunesController {
         root = FXMLLoader.load(getClass().getResource("fortuneApp.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+
+        // sets the css sheet to the scene
+        URL css = this.getClass().getResource("/css/appStyle.css");
+        if (css != null) {
+            String appCSS = css.toExternalForm();
+            scene.getStylesheets().add(appCSS);
+
+        } else {
+            System.out.println("Error: appStyle.css not found");
+        }
+
         stage.setScene(scene);
         stage.show();
     }

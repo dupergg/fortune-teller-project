@@ -1,0 +1,1 @@
+This program allows users to receive a fortune in any way that they desire.
