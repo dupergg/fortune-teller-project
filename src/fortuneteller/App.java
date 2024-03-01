@@ -13,7 +13,6 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("fortuneApp.fxml"));
-
         Scene scene = new Scene(root);
 
         // sets the css sheet to the scene

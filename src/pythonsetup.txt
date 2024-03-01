@@ -1,0 +1,24 @@
+Install python 3.8
+Add python 3.8 folder to "Path" variable in windows environment variables
+
+python -m pip install jep
+
+add jep-4.2.0.jar to referenced libraries (VSCode)
+
+python -m pip install chatterbot
+
+got into C:\Users\USER\AppData\Local\Programs\Python\Python38\Lib\site-packages\chatterbot open tagging.py
+
+change self.nlp = spacy.load(self.language.ISO_639_1.lower()) to 
+
+if self.language.ISO_639_1.lower() == 'en':
+    self.nlp = spacy.load('en_core_web_lg')
+else:
+    self.nlp = spacy.load(self.language.ISO_639_1.lower())
+
+python -m pip install spacy
+
+python -m spacy download en_core_web_lg
+
+put folder paths into "Path" windows environment variable for SpaCy and Jep
+C:\Users\USER\AppData\Local\Programs\Python\Python38\Lib\site-packages\jep

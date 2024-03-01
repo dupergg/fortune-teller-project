@@ -6,10 +6,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "JepTest",
+            "request": "launch",
+            "mainClass": "fortuneteller.JepTest",
+            "projectName": "fortune-teller-project_5a76caf9"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "fortuneteller.App",
-            "vmArgs": "--module-path C:\\'Program Files'\\Java\\javafx-sdk-21.0.2\\lib --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path C:\\'Program Files'\\Java\\javafx-sdk-21.0.2\\lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }

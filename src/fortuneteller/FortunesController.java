@@ -20,6 +20,32 @@ public class FortunesController {
     private Button backButton;
 
     @FXML
+    private Button fortuneTellerButton;
+
+    @FXML
+    void fortuneTellerButtonPressed(ActionEvent event) throws IOException {
+        Stage stage;
+        Scene scene;
+        Parent root;
+
+        root = FXMLLoader.load(getClass().getResource("fortuneTeller.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
+        if (defaultCSS != null) {
+            String defCSS = defaultCSS.toExternalForm();
+            scene.getStylesheets().add(defCSS);
+
+        } else {
+            System.out.println("Error: defaults.css not found");
+        }
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     void backButtonPressed(ActionEvent event) throws IOException {
         Stage stage;
         Scene scene;
