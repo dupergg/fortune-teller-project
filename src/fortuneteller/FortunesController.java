@@ -23,6 +23,9 @@ public class FortunesController {
     private Button fortuneTellerButton;
 
     @FXML
+    private Button tarotCardButton;
+
+    @FXML
     void fortuneTellerButtonPressed(ActionEvent event) throws IOException {
         Stage stage;
         Scene scene;
@@ -44,6 +47,32 @@ public class FortunesController {
         stage.setScene(scene);
         stage.show();
     }
+
+    //Opens the screen for tarot card readings
+    @FXML
+    void tarotCardButtonPressed(ActionEvent event) throws IOException {
+        Stage stage;
+        Scene scene;
+        Parent root;
+
+        root = FXMLLoader.load(getClass().getResource("tarotCard.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
+        if (defaultCSS != null) {
+            String defCSS = defaultCSS.toExternalForm();
+            scene.getStylesheets().add(defCSS);
+
+        } else {
+            System.out.println("Error: defaults.css not found");
+        }
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
 
     @FXML
     void backButtonPressed(ActionEvent event) throws IOException {

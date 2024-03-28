@@ -24,7 +24,12 @@
             </HBox>
             <VBox prefHeight="600.0" prefWidth="600.0">
                <children>
-                  <TextArea fx:id="outputTextArea" editable="false" focusTraversable="false" prefHeight="600.0" text="This is some text." wrapText="true">
+                  <TextArea fx:id="outputTextArea" editable="false" focusTraversable="false" prefHeight="500.0" text="This is some text." wrapText="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="inputTextArea" editable="true" focusTraversable="true" prefHeight="100.0" text="put prompt here!" wrapText="true">
                      <font>
                         <Font size="24.0" />
                      </font>

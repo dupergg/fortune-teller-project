@@ -1,0 +1,87 @@
+// Containts all of the information used for tarot cards
+// name ~ image URL ~ meaning
+//
+// Major Arcana
+The Fool ~ images\\tarotCards\\thefool.jpg ~ innocence, new beginnings, free spirit
+The Magician ~ images\\tarotCards\\themagician.jpg ~ willpower, desire, creation, manifestation
+The Priestess ~ images\\tarotCards\\thepriestess.jpg ~ intuitive, unconscious, inner voice
+The Empress ~ images\\tarotCards\\theempress.jpg ~ motherhood, fertility, nature
+The Hierophant ~ images\\tarotCards\\thehierophant.jpg ~ tradition, conformity, morality
+The Lovers ~ images\\tarotCards\\thelovers.jpg ~ partnerships, duality, union
+The Chariot ~ images\\tarotCards\\thechariot.jpg ~ direction, control, willpower
+Strength ~ images\\tarotCards\\strength.jpg ~ inner strength, bravery, compassion, focus
+The Hermit ~ images\\tarotCards\\thehermit.jpg ~ contemplation, search for truth, inner guidance
+The Wheel of Fortune ~ images\\tarotCards\\thewheeloffortune.jpg ~ change, cycles, inevitable fatherhood
+Justice ~ images\\tarotCards\\justice.jpg ~ cause and effect, clarity, truth
+The Hanged Man ~ images\\tarotCards\\thehangedman.jpg ~ sacrifice, release, martyrdom
+Death ~ images\\tarotCards\\death.jpg ~ end of cycle, beginnings, change, metamorphosis
+Temperance ~ images\\tarotCards\\temperance.jpg ~ middle path, patience, finding meaning
+The Moon ~ images\\tarotCards\\themoon.jpg ~ unconscious, illusions, intuition
+The Sun ~ images\\tarotCards\\thesun.jpg ~ joy, success, celebration, positivity
+The Tower ~ images\\tarotCards\\thetower.jpg ~ sudden upheaval, broken pride, disaster
+The Horned One ~ images\\tarotCards\\thehornedone.jpg ~ addiction, materialism, playfulness
+The World ~ images\\tarotCards\\theworld.jpg ~ fufillment, harmony, completion
+//
+// Suit of Swords
+Ace of Swords ~ images\\tarotCards\\aceofswords.jpg ~ breakthrough, clarity, sharp mind
+Two of Swords ~ images\\tarotCards\\2ofswords.jpg ~ difficult choices, indecision, stalemate
+Three of Swords ~ images\\tarotCards\\3ofswords.jpg ~ heartbreak, suffering, grief
+Four of Swords ~ images\\tarotCards\\4ofswords.jpg ~ rest, restoration, contemplation
+Five of Swords ~ images\\tarotCards\\5ofswords.jpg ~ unbridled ambition, win at all costs, sneakiness
+Six of Swords ~ images\\tarotCards\\6ofswords.jpg ~ leaving behind, moving on
+Seven of Swords ~ images\\tarotCards\\7ofswords.jpg ~ deception, trickery, tractics and strategy
+Eight of Swords ~ images\\tarotCards\\8ofswords.jpg ~ imprisonment, entrapment, self-victimization
+Nine of Swords ~ images\\tarotCards\\9ofswords.jpg ~ anxiety, hopelessness, trauma
+Ten of Swords ~ images\\tarotCards\\10ofswords.jpg ~ failure, collapse, defeat
+Page of Swords ~ images\\tarotCards\\pageofswords.jpg ~ curiosity, restlessness, mental energy
+Knight of Swords ~ images\\tarotCards\\knightofswords.jpg ~ action, impulsiveness, defending beliefs
+Queen of Swords ~ images\\tarotCards\\queenofswords.jpg ~ complexity, preceptiveness, clear mindedness
+King of Swords ~ images\\tarotCards\\kingofswords.jpg ~ head over heart, discipline, truth
+// 
+// Suit of Wands
+Ace of Wands ~ images\\tarotCards\\aceofwands.jpg ~ creation, willpower, inspiration
+Two of Wands ~ images\\tarotCards\\2ofwands.jpg ~ planning, making decisions, leaving home
+Three of Wands ~ images\\tarotCards\\3ofwands.jpg ~ looking ahead, expansion, rapid growth
+Four of Wands  ~ images\\tarotCards\\4ofwands.jpg ~ community, home, celebration
+Five of Wands ~ images\\tarotCards\\5ofwands.jpg ~ competition, rivalry, conflict
+Six of Wands ~ images\\tarotCards\\6ofwands.jpg ~ victory, success, public reward
+Seven of Wands ~ images\\tarotCards\\7ofwands.jpg ~ perseverance, defensive, maintaining control
+Eight of Wands ~ images\\tarotCards\\8ofwands.jpg ~ rapid action, movement, quick decisions
+Nine of Wands ~ images\\tarotCards\\9ofwands.jpg ~ resilience, grit, last stand
+Ten of Wands ~ images\\tarotCards\\10ofwands.jpg ~ accomplishment, responsibility, burden
+Page of Wands ~ images\\tarotCards\\pageofwands.jpg ~ Exploration, excitement, freedom
+Knight of Wands ~ images\\tarotCards\\knightofwands.jpg ~ action, adventure, fearlessness
+Queen of Wands ~ images\\tarotCards\\queenofwands.jpg ~ courage, determination, joy
+King of Wands ~ images\\tarotCards\\kingofwands.jpg ~ big picture, leader, overcoming challenges
+//
+// Suit of Cups
+Ace of Cups ~ images\\tarotCards\\aceofcups.jpg ~ new feelings, spirituality, intuition
+Two of Cups ~ images\\tarotCards\\2ofcups.jpg ~ unity, partnership, connection
+Three of Cups ~ images\\tarotCards\\3ofcups.jpg ~ friendship, community, happiness
+Four of Cups ~ images\\tarotCards\\4ofcups.jpg ~ apathy, contemplation, disconnectedness
+Five of Cups ~ images\\tarotCards\\5ofcups.jpg ~ loss, grief, self-pity
+Six of Cups ~ images\\tarotCards\\6ofcups.jpg ~ familiarity, happy memories, healing
+Seven of Cups ~ images\\tarotCards\\7ofcups.jpg ~ searching for purpose, choices, daydreaming
+Eight of Cups ~ images\\tarotCards\\8ofcups.jpg ~ walking away, disillusionment, leaving behind
+Nine of Cups ~ images\\tarotCards\\9ofcups.jpg ~ satisfaction, emotional stability, luxury
+Ten of Cups ~ images\\tarotCards\\10ofcups.jpg ~ inner happiness, fulfillment, dreams coming true
+Page of Cups ~ images\\tarotCards\\pageofcups.jpg ~ happy suprise, dreamer, sensitivity
+Knight of Cups ~ images\\tarotCards\\knightofcups.jpg ~ following the heart, idealist, romantic
+Queen of Cups ~ images\\tarotCards\\queenofcups.jpg ~ compassion, calm, comfort
+King of Cups ~ images\\tarotCards\\kingofcups.jpg ~ compassion, control, balance
+//
+// Suit of Pentacles
+Ace of Pentacles ~ images\\tarotCards\\aceofpentacles.jpg ~ opportunity, prosperity, new venture
+Two of Pentacles ~ images\\tarotCards\\2ofpentacles.jpg ~ balancing decisions, priorities, adapting to change
+Three of Pentacles ~ images\\tarotCards\\3ofpentacles.jpg ~ teamwork, collaboration, building
+Four of Pentacles ~ images\\tarotCards\\4ofpentacles.jpg ~ conservation, frugality, security
+Five of Pentacles ~ images\\tarotCards\\5ofpentacles.jpg ~ need, poverty, insecurity
+Six of Pentacles ~ images\\tarotCards\\6ofpentacles.jpg ~ charity, generosity, sharing
+Seven of Pentacles ~ images\\tarotCards\\7ofpentacles.jpg ~ hard work, perserverance, diligence
+Eight of Pentacles ~ images\\tarotCards\\8ofpentacles.jpg ~ apprenticeship, passion, high standards
+Nine of Pentacles ~ images\\tarotCards\\9ofpentacles.jpg ~ fruits of labor, rewards, luxury
+Ten of Pentacles ~ images\\tarotCards\\10ofpentacles.jpg ~ legacy, culmination, inheritance
+Page of Pentacles ~ images\\tarotCards\\pageofpentacles.jpg ~ ambition, desire, diligence
+Knight of Pentacles ~ images\\tarotCards\\knightofpentacles.jpg ~ efficiency, hard work, responsibility
+Queen of Pentacles ~ images\\tarotCards\\queenofpentacles.jpg ~ practicality, creature comforts, financial security
+King of Pentacles ~ images\\tarotCards\\kingofpentacles.jpg ~ abundance, prosperity, security
