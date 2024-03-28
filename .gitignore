@@ -37,3 +37,19 @@ replay_pid*
 # Built Visual Studio Code Extensions
 *.vsix
 db.sqlite3
+bin/css/appStyle.css
+bin/css/defaults.css
+bin/fortuneteller/App.class
+bin/fortuneteller/AppController.class
+bin/fortuneteller/fortuneApp.fxml
+bin/fortuneteller/fortunes.fxml
+bin/fortuneteller/fortuneTeller.fxml
+bin/fortuneteller/info.fxml
+bin/fortuneteller/infoText.txt
+bin/fortuneteller/tarotCard.fxml
+bin/fortuneteller/tarotCards.txt
+bin/images/eightball.jpg
+bin/fortuneteller/App.class
+bin/fortuneteller/AppController.class
+bin/fortuneteller/AppController.class
+bin/fortuneteller/App.class
