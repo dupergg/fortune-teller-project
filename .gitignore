@@ -25,6 +25,7 @@ hs_err_pid*
 replay_pid*
 
 #VSCode
+**/.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -56,3 +57,4 @@ bin/fortuneteller/App.class
 .vscode/launch.json
 .vscode/launch.json
 .vscode/settings.json
+*.json
