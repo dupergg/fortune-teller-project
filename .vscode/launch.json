@@ -16,7 +16,7 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "fortuneteller.App",
-            "vmArgs": "--module-path C:\\'Program Files'\\Java\\javafx-sdk-21.0.2\\lib --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path C:\\Users\\larry\\Documents\\openjfx-21.0.2_windows-x64_bin-sdk\\javafx-sdk-21.0.2\\lib --add-modules javafx.controls,javafx.fxml",
         }
     ]
 }

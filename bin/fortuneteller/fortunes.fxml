@@ -11,9 +11,14 @@
    <children>
       <VBox>
          <children>
-            <VBox alignment="CENTER" prefHeight="700.0" prefWidth="600.0">
+            <VBox alignment="CENTER" prefHeight="700.0" prefWidth="600.0" spacing="10.0">
                <children>
                   <Button fx:id="fortuneTellerButton" mnemonicParsing="false" onAction="#fortuneTellerButtonPressed" text="Fortune Teller" textAlignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="tarotCardButton" mnemonicParsing="false" onAction="#tarotCardButtonPressed" text="Tarot Card" textAlignment="CENTER">
                      <font>
                         <Font size="36.0" />
                      </font>

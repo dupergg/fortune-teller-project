@@ -1,16 +1,25 @@
 {
-    "java.project.sourcePaths": ["src"],
+    "java.project.sourcePaths": [
+        "src",
+        "lib"
+    ],
     "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.base.jar",
-        "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.controls.jar",
-        "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.fxml.jar",
-        "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.graphics.jar",
-        "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.media.jar",
-        "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.swing.jar",
-        "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.web.jar",
-        "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx-swt.jar",
-        "c:\\Users\\bryce\\AppData\\Local\\Programs\\Python\\Python38\\Lib\\site-packages\\jep\\jep-4.2.0.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.base.jar",
+            "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.controls.jar",
+            "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.fxml.jar",
+            "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.graphics.jar",
+            "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.media.jar",
+            "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.swing.jar",
+            "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx.web.jar",
+            "d:\\Java\\javafx-sdk-21.0.2\\lib\\javafx-swt.jar",
+            "C:\\Users\\larry\\AppData\\Local\\Programs\\Python\\Python38\\Lib\\site-packages\\jep\\jep-4.2.0",
+            "c:\\Users\\larry\\AppData\\Local\\Programs\\Python\\Python38\\Lib\\site-packages\\jep\\jep-4.2.0.jar"
+        ],
+        "exclude": [
+            "lib/jep-4.2.0.jar"
+        ]
+    }
 }
