@@ -23,6 +23,11 @@
                         <Font size="36.0" />
                      </font>
                   </Button>
+                  <Button fx:id="eightBallButton" mnemonicParsing="false" onAction="#eightBallButtonPressed" text="Magic Eight Ball" textAlignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
                </children></VBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0">
                <children>
