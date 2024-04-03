@@ -2,25 +2,30 @@ package fortuneteller;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
+import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.control.CheckBox;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import java.io.File;
-import java.util.Scanner;
 
 public class TarotCardController {
     
+    @FXML
+    private CheckBox checkbox;
+
     @FXML
     private Button backButton;
 
@@ -58,20 +63,26 @@ public class TarotCardController {
 
     //When the class loads, load all of values from a file into the "cards" list
     public TarotCardController() throws FileNotFoundException {
-        //Load the file with all of the tarot card information
-        File file = new File("src\\fortuneteller\\tarotCards.txt");
-        Scanner scan = new Scanner(file);
-
-        while (scan.hasNextLine()) {
-            String input = scan.nextLine();
-            if (Character.compare(input.charAt(0), '/') == 0) {
-                continue;
+        try {
+            File file = new File("src\\fortuneteller\\tarotCards.txt");
+            
+            Scanner scan = new Scanner(file);
+            
+            while (scan.hasNextLine()) {
+                String input = scan.nextLine();
+                if (Character.compare(input.charAt(0), '/') == 0) {
+                    continue;
+                }
+                String[] info = input.split(" ~ ");
+                tarotCard card = new tarotCard(info[0], info[1], info[2], info[3]);
+                cards.add(card);
             }
-            String[] info = input.split(" ~ ");
-            tarotCard card = new tarotCard(info[0], info[1], info[2]);
-            cards.add(card);
+            scan.close();
+        } catch(Exception e) {
+            System.out.println("Error trying to load file");
+            System.out.println(e);
+            System.exit(0);
         }
-        scan.close();
     }
 
     //Sets the relevent FXML stuff to info from three random cards from the "cards" list
@@ -84,9 +95,24 @@ public class TarotCardController {
 
     //Sets the given ImageView & Text of the values in the given tarotCard
     public void setCard(ImageView image, Text name, Text meaning, tarotCard card) {
-        image.setImage(card.getImage());
-        name.setText(card.getName());
-        meaning.setText(card.getMeaning());
+        Random r = new Random();
+        int reverse = r.nextInt(2);
+
+        if (checkbox.isSelected() && reverse == 0) {
+            if (image.getRotate() == 0) {
+                image.setRotate(180);
+            }
+            image.setImage(card.getImage());
+            name.setText(card.getName());
+            meaning.setText(card.getReversedMeaning());
+        } else {
+            if (image.getRotate() == 180) {
+                image.setRotate(0);
+            }
+            image.setImage(card.getImage());
+            name.setText(card.getName());
+            meaning.setText(card.getMeaning());
+        }
     }
 
     //Opens the Fortunes screen

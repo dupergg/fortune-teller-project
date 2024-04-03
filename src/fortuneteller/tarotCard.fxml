@@ -10,32 +10,45 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-
+<?import javafx.scene.control.CheckBox?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@../css/defaults.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fortuneteller.TarotCardController">
    <children>
-      <VBox>
+      <VBox alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0">
+            <HBox alignment="CENTER">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tarot Card Reader" textAlignment="CENTER">
+                  <Text text="Tarot Card Reader" textAlignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="68.0" />
+                        <Font name="Century" size="64.0" />
                      </font>
                   </Text>
                </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
             </HBox>
+                        <Text text="Think of a question or object of concern," textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20" />
+               </font>
+            </Text>
+               <Text text="and let the reading help you find the answer!" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20" />
+               </font>
+            </Text>
             <HBox alignment="CENTER" spacing="20">
                <children>
                   <VBox alignment="CENTER" prefWidth="170">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Past" textAlignment="CENTER">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="22.0" />
                            </font>
                         </Text>
                         <ImageView fx:id="tarotCard1" fitHeight="240" fitWidth="170">
-                           <Image fx:id="im" url="@..//images//tarotCards//4ofswords.PNG"/>
+                           <Image fx:id="im" url="@..//images//cardBack.jpg"/>
                         </ImageView>
                         <Text fx:id="cardName1" text=" " textAlignment="CENTER">
                            <font>
@@ -48,11 +61,11 @@
                      <children>
                         <Text text="Present" textAlignment="CENTER">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="22.0" />
                            </font>
                         </Text>
                         <ImageView fx:id="tarotCard2" fitHeight="240" fitWidth="170">
-                           <Image url="@..//images//tarotCards//4ofswords.PNG"/>
+                           <Image url="@..//images//cardBack.jpg"/>
                         </ImageView>
                         <Text fx:id="cardName2" text=" " textAlignment="CENTER">
                            <font>
@@ -65,11 +78,11 @@
                      <children>
                         <Text text="Future" textAlignment="CENTER">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="22.0" />
                            </font>
                         </Text>
                         <ImageView fx:id="tarotCard3" fitHeight="240" fitWidth="170">
-                           <Image url="@..\\images\\tarotCards\\4ofswords.PNG"/>
+                           <Image url="@..//images//cardBack.jpg"/>
                         </ImageView>
                         <Text fx:id="cardName3" text=" " textAlignment="CENTER">
                            <font>
@@ -80,25 +93,57 @@
                   </VBox>
                </children>
                <padding>
-                  <Insets left="20.0" />
+                  <Insets left="10.0" bottom="10" top="10" />
                </padding>
             </HBox>
-            <Text text="Think of a question or object of concern," textAlignment="CENTER">
+            <VBox prefHeight="235" alignment="CENTER">
+               <children>
+                  <Text text="Past:" textAlignment="CENTER" WrappingWidth="500">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="cardMeaning1" text="    " textAlignment="CENTER" WrappingWidth="500">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text text="Present:" textAlignment="CENTER" WrappingWidth="500">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="cardMeaning2" text="    "  textAlignment="CENTER" WrappingWidth="500">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text text="Future:" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="cardMeaning3" text="    "  textAlignment="CENTER" WrappingWidth="500">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <CheckBox fx:id="checkbox" indeterminate="false" text="include reversed cards">
                <font>
-                  <Font name="System Bold" size="20" />
+                   <Font name="System Bold" size="20.0" />
                </font>
-            </Text>
-               <Text text="and let the reading help you find the answer!" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="20" />
-               </font>
-            </Text>
+            </CheckBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0">
                <children>
                   <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonPressed" text="Back">
                      <font>
                         <Font size="36.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
                   </Button>
                   <Button fx:id="readButton" mnemonicParsing="false" onAction="#tarotReading" text="Give Reading">
                      <font>
@@ -110,36 +155,6 @@
                   <Insets left="10.0" />
                </padding>
             </HBox>
-            <Text text="Past:" textAlignment="CENTER">
-               <font>
-                   <Font name="System Bold" size="20.0" />
-               </font>
-            </Text>
-            <Text fx:id="cardMeaning1" text=" " textAlignment="CENTER">
-               <font>
-                   <Font name="System Bold" size="20.0" />
-               </font>
-            </Text>
-            <Text text="Present:" textAlignment="CENTER">
-               <font>
-                   <Font name="System Bold" size="20.0" />
-               </font>
-            </Text>
-            <Text fx:id="cardMeaning2" text=" "  textAlignment="CENTER">
-               <font>
-                   <Font name="System Bold" size="20.0" />
-               </font>
-            </Text>
-            <Text text="Future:" textAlignment="CENTER">
-               <font>
-                   <Font name="System Bold" size="20.0" />
-               </font>
-            </Text>
-            <Text fx:id="cardMeaning3" text=" "  textAlignment="CENTER">
-               <font>
-                   <Font name="System Bold" size="20.0" />
-               </font>
-            </Text>
          </children>
       </VBox>
    </children>

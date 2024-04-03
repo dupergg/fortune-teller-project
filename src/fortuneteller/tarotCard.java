@@ -6,12 +6,14 @@ public class tarotCard {
     String cardName;
     Image cardImage;
     String cardMeaning;
+    String cardReversedMeaning;
 
     //Constructor
-    public tarotCard(String name, String URL, String meaning) {
+    public tarotCard(String name, String imageURL, String meaning, String reverseMeaning) {
         cardName = name;
-        cardImage = new Image(URL);
+        cardImage = new Image(imageURL);
         cardMeaning = meaning;
+        cardReversedMeaning = reverseMeaning;
     }
 
     //returns the name of the card
@@ -29,28 +31,8 @@ public class tarotCard {
         return cardMeaning;
     }
 
-    // Stuff that is currently not being used
-    // mainly related to adding a functionality for including reversed cards
-    /*
-    import java.util.Random;
-
-    Image uprightImage;
-    Image reversedImage;
-    String uprightMeaning;
-    String reversedMeaning;
-    String currentPosition; //is the card upright or reversed?
-    String cardImageURL;
-
-    public void randomizePosition() {
-        Random rand = new Random();
-        int num = rand.nextInt(2);
-        if (num == 0) {
-            cardImage = uprightImage;
-            cardMeaning = uprightMeaning;
-        } else {
-            cardImage = reversedImage;
-            cardMeaning = reversedMeaning;
-        }
+    //returns the reversed meaning of the card
+    public String getReversedMeaning() {
+        return cardReversedMeaning;
     }
-    */
 }
