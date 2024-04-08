@@ -18,6 +18,11 @@ This is found under "vmaArgs".
 
 If you are using another IDE, I suggest reading over the tutorial above to set up the project.
 
+## External Libraries
+
+For this project, we are using a translation library name "Jep" to translate our python chat bot so the Java program can use it.
+
+
 ## Folder Structure
 
 The workspace contains two folders by default, where:
