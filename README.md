@@ -29,7 +29,7 @@ The Python folder needs to be added to the PATH environment variable in Windows.
 For this project, we are using a translation library name "Jep" to translate our python chat bot so the Java program can use it.
 To install this run `python -m pip install jep` in Windows Powershell.
 
-Add the `.jar` file for jep, which chan be found at `C:\Users\USER\AppData\Local\Programs\Python\Python38\Lib\site-packages\jep` to "Referenced Libraries" in Visual Studio Code.
+Add the `.jar` file for jep, which can be found at `C:\Users\USER\AppData\Local\Programs\Python\Python38\Lib\site-packages\jep` to "Referenced Libraries" in Visual Studio Code.
 
 For this version of the project, we are using a library called ChatterBot. The implementation is very basic and will be changed to another
 chat bot in the future.
