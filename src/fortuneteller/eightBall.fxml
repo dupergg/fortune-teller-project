@@ -30,7 +30,7 @@
                         <Font size="24.0" />
                      </font>
                   </Text>
-                  <TextArea fx:id="inputTextArea" focusTraversable="false" promptText="Enter a &quot;Yes&quot; or &quot;No&quot; question for the eight ball to answer..." translateX="10.0" wrapText="true">
+                  <TextArea fx:id="inputTextArea" focusTraversable="false" promptText="Enter a &quot;Yes&quot; or &quot;No&quot; question for the Orb to answer..." translateX="10.0" wrapText="true">
                      <font>
                         <Font size="18.0" />
                      </font>
