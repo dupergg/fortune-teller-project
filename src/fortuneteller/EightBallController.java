@@ -41,7 +41,7 @@ public class EightBallController {
         return number;
     }
 
-    // Ask the eight ball a yes or no question
+    // Ask the Orb a yes or no question
     // take the user's input, just delete it when the button is pressed
         // maybe save it to a log with the user's prompt(s) and the ball's answer
     // switch case for each of the numbers
@@ -63,67 +63,67 @@ public class EightBallController {
 
         switch (num) {
             case 1:
-                outputText.setText("The magic eight ball says: It is certain.");
+                outputText.setText("The magic Orb says: It is certain.");
                 break;
             case 2:
-                outputText.setText("The magic eight ball says: It is decidedlly so.");
+                outputText.setText("The magic Orb says: It is decidedlly so.");
                 break;
             case 3:
-                outputText.setText("The magic eight ball says: Without a doubt.");
+                outputText.setText("The magic Orb says: Without a doubt.");
                 break;
             case 4:
-                outputText.setText("The magic eight ball says: Yes definitely.");
+                outputText.setText("The magic Orb says: Yes definitely.");
                 break;
             case 5:
-                outputText.setText("The magic eight ball says: You may rely on it.");
+                outputText.setText("The magic Orb says: You may rely on it.");
                 break;
             case 6:
-                outputText.setText("The magic eight ball says: As I see it, yes.");
+                outputText.setText("The magic Orb says: As I see it, yes.");
                 break;
             case 7:
-                outputText.setText("The magic eight ball says: Most likely.");
+                outputText.setText("The magic Orb says: Most likely.");
                 break;
             case 8:
-                outputText.setText("The magic eight ball says: Outlook good.");
+                outputText.setText("The magic Orb says: Outlook good.");
                 break;
             case 9:
-                outputText.setText("The magic eight ball says: Yes.");
+                outputText.setText("The magic Orb says: Yes.");
                 break;
             case 10:
-                outputText.setText("The magic eight ball says: Signs point to yes.");
+                outputText.setText("The magic Orb says: Signs point to yes.");
                 break;
             case 11:
-                outputText.setText("The magic eight ball says: Reply hazy, try again.");
+                outputText.setText("The magic Orb says: Reply hazy, try again.");
                 break;
             case 12:
-                outputText.setText("The magic eight ball says: Ask again later.");
+                outputText.setText("The magic Orb says: Ask again later.");
                 break;
             case 13:
-                outputText.setText("The magic eight ball says: Better not tell you now.");
+                outputText.setText("The magic Orb says: Better not tell you now.");
                 break;
             case 14:
-                outputText.setText("The magic eight ball says: Cannot predict now.");
+                outputText.setText("The magic Orb says: Cannot predict now.");
                 break;
             case 15:
-                outputText.setText("The magic eight ball says: Concentrate and ask again.");
+                outputText.setText("The magic Orb says: Concentrate and ask again.");
                 break;
             case 16:
-                outputText.setText("The magic eight ball says: Don't count on it.");
+                outputText.setText("The magic Orb says: Don't count on it.");
                 break;
             case 17:
-                outputText.setText("The magic eight ball says: My reply is no.");
+                outputText.setText("The magic Orb says: My reply is no.");
                 break;
             case 18:
-                outputText.setText("The magic eight ball says: My sources say no.");
+                outputText.setText("The magic Orb says: My sources say no.");
                 break;
             case 19:
-                outputText.setText("The magic eight ball says: Outlook not so good.");
+                outputText.setText("The magic Orb says: Outlook not so good.");
                 break;
             case 20:
-                outputText.setText("The magic eight ball says: Very doubtful.");
+                outputText.setText("The magic Orb says: Very doubtful.");
                 break;
             default:
-                outputText.setText("The magic eight ball says: Error, try again.");
+                outputText.setText("The magic Orb says: Error, try again.");
                 break;
         }
 
@@ -138,8 +138,8 @@ public class EightBallController {
         // clear the text in the question box
         inputTextArea.setText("");
 
-        // clear eight ball text and set it back to default
-        outputText.setText("The magic eight ball says:");
+        // clear Orb text and set it back to default
+        outputText.setText("The Orb says:");
 
         // make the buttons visible and invisible again
         submitButton.setVisible(true);
