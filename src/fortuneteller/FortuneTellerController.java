@@ -1,14 +1,12 @@
 package fortuneteller;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Scanner;
-
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,11 +16,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
-import jep.Interpreter;
-import jep.SharedInterpreter;
 
 
-
+// have to run chatty.py before you can recieve your fortunes
 public class FortuneTellerController {
 
     @FXML
@@ -37,63 +33,31 @@ public class FortuneTellerController {
     @FXML
     private TextArea inputTextArea;
 
-    String chatBotTest(String message) throws FileNotFoundException, URISyntaxException {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(baos);
-        PrintStream stdout = System.out;
-        System.setOut(ps);
+    private String chatBotTest(String input) {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:5000/fortune"))
+            .header("Content-Type", "application/json")
+            .POST(HttpRequest.BodyPublishers.ofString("{\"prompt\":\"" + input + "\"}"))
+            .build();
 
-        try (Interpreter interp = new SharedInterpreter()) {
-            interp.exec("from chatterbot import ChatBot"); 
-            interp.exec("chatbot = ChatBot(\"Ron Obvious\")");
-
-            interp.exec("from chatterbot.trainers import ListTrainer");
-
-            interp.exec("conversation = [\"Hello\",\"Hi there!\",\"How are you doing?\",\"I'm doing great.\",\"That is good to hear\",\"Thank you.\",\"You're welcome.\"]");
-
-            interp.exec("trainer = ListTrainer(chatbot)");
-
-            interp.exec("trainer.train(conversation)");
-
-            //Just testing some things, feel free to change this - Alanna
-            interp.exec("conv2 = [\"Good Morning!\", \"Good Morning\"]");
-            interp.exec("response1 = [\"How will my day go?\", \"You will have a great day today!\"]");
-            interp.exec("response2 = [\"How will my day go?\", \"You may face challenges today.\"]");
-            interp.exec("response3 = [\"How will my day go?\", \"You will have a relaxed day.\"]");
-            interp.exec("trainer.train(conv2)");
-            interp.exec("trainer.train(response1)");
-            interp.exec("trainer.train(response2)");
-            interp.exec("trainer.train(response3)");
-
-            interp.exec("response = chatbot.get_response(" + "\"" + message + "\"" + ")"); // this amalgamation is how we can use Strings and put it into the chatterbot
-            interp.exec("print(response)");
-
-            String output = baos.toString();
-    
-            // reset back to standard out
-            System.out.flush();
-            System.setOut(stdout);
-            
-            return output;
+        try {
+            HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+            return response.body();
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            return "Error: Unable to retrieve fortune... because you are stupid... make sure chatty.py is running";
         }
-        
     }
 
-    // currently does not work the way I want it to - Bryce
     @FXML
     void testButtonPressed(ActionEvent event) {
         String input = inputTextArea.getText();
-        inputTextArea.clear();
-        try {
-            String output = chatBotTest(input);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            System.err.println("FILE NOT FOUND");
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-            System.err.println("INCORRECT URI SYNTAX");
-        }
+        String output = chatBotTest(input);
+        output = output.replace("\"", "").replace("{", "").replace("}", "");
+        outputTextArea.setText(output);
     }
+
     
     @FXML
     void backButtonPressed(ActionEvent event) throws IOException {
