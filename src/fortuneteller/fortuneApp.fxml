@@ -6,7 +6,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -17,39 +16,34 @@
             <Image url="@title612.gif" />
          </image>
       </ImageView>
-      <VBox alignment="CENTER" layoutX="135.0" layoutY="610.0" prefHeight="117.0" prefWidth="332" spacing="10">
+      <VBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="560.0" prefHeight="117.0" prefWidth="132.0">
          <children>
-            <Button fx:id="fortunesButton" alignment="CENTER" mnemonicParsing="false" onAction="#fortunesButtonPressed" text="Fortunes">
+            <Button fx:id="fortunesButton" mnemonicParsing="false" onAction="#fortunesButtonPressed" text="Fortunes">
                <font>
-                  <Font size="40.0" />
+                  <Font size="24.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin>
             </Button>
-            <HBox alignment="CENTER" prefHeight="100">
-               <children>
-                  <Button fx:id="infoButton" alignment="CENTER" mnemonicParsing="false" onAction="#infoButtonPressed" text="Info">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets bottom="2.0" left="2.0" right="15.0" top="2.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="exitButton" alignment="CENTER" mnemonicParsing="false" onAction="#exitButtonPressed" text="Exit">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets bottom="2.0" left="2.0" right="0.0" top="2.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
+            <Button fx:id="infoButton" mnemonicParsing="false" onAction="#infoButtonPressed" text="Info">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="50.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitButtonPressed" text="Exit">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="50.0" top="2.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
-
       <Text layoutX="102.0" layoutY="782.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project by: Bryce Doperalski, Jared Guidry, Alanna Siebers, and Justin Zager" />
    </children>
 </Pane>

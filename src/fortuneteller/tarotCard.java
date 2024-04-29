@@ -35,11 +35,4 @@ public class tarotCard {
     public String getReversedMeaning() {
         return cardReversedMeaning;
     }
-
-    public void print() {
-        System.out.println(cardName);
-        System.out.println("    Meaning: " + cardMeaning);
-        System.out.println("    Reversed Meaning: " + cardReversedMeaning);
-        System.out.println("    Image URL: " + cardImage.getUrl());
-    }
 }

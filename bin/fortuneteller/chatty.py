@@ -13,11 +13,8 @@
 #   problably get a free version because we would be using it for a school project but i didnt feel like going through all
 #   that trouble.         gpt2 has 1.5 billion parameters, gpt3 and gpt4 has 175 billion parameters. They are smarter
 
-from flask import Flask, request, jsonify
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
-
-app = Flask(__name__)
 
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 model = GPT2LMHeadModel.from_pretrained('gpt2')
@@ -31,7 +28,7 @@ def generate_fortune(prompt_text, max_length=25):
             do_sample = True,
             max_length=max_length,
             temperature=0.8,
-            top_p=0.9,
+            top_p=0.5,
             num_return_sequences=1
         )
 
@@ -54,24 +51,13 @@ def generate_fortune(prompt_text, max_length=25):
 
         return text.strip()
 
-@app.route('/fortune', methods=['POST'])
-def fortune_api():
-    content = request.json
-    prompt = content.get('prompt')
-    if not prompt:
-        return jsonify({"error": "No prompt provided"}), 400
+
+while(True):
+    prompt = input("Enter what type of fortune you want... Exaple 'wealth', or 'personnal' (or 'exit' to quit): ")
+    if prompt.lower() == 'exit':
+        break
     fortune = generate_fortune("your " + prompt + " fortune is")
-    return jsonify({"Madam Bridgite says": fortune})
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
-
-# while(True):
-#     prompt = input("Enter what type of fortune you want... Exaple 'wealth', or 'personnal' (or 'exit' to quit): ")
-#     if prompt.lower() == 'exit':
-#         break
-#     fortune = generate_fortune("your " + prompt + " fortune is")
-#     print()
-#     print("Madam Brigitte says ", end = "")
-#     print(fortune)
-#     print()
+    print()
+    print("Madam Brigitte says ", end = "")
+    print(fortune)
+    print()

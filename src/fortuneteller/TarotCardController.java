@@ -78,7 +78,6 @@ public class TarotCardController {
                 cards.add(card);
             }
             scan.close();
-            //printAllCards(); //Used to check the if all of the card loaded correctly
         } catch(Exception e) {
             System.out.println("Error trying to load file");
             System.out.println(e);
@@ -87,20 +86,11 @@ public class TarotCardController {
     }
 
     //Sets the relevent FXML stuff to info from three random cards from the "cards" list
-    //Commented out sections are used for checking the output of this method
     public void tarotReading() {
         Collections.shuffle(cards);
-        //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        //System.out.println("Cards Before Reading");
-        //checkAllCardSlots();
-        //System.out.println();
         setCard(tarotCard1, cardName1, cardMeaning1, cards.get(0));
         setCard(tarotCard2, cardName2, cardMeaning2, cards.get(1));
         setCard(tarotCard3, cardName3, cardMeaning3, cards.get(2));
-        //System.out.println("Cards After Reading");
-        //checkAllCardSlots();
-        //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        //System.out.println();
     }
 
     //Sets the given ImageView & Text of the values in the given tarotCard
@@ -157,32 +147,6 @@ public class TarotCardController {
 
         stage.setScene(scene);
         stage.show();
-    }
-
-
-    //The following are used to show that the code is working properly
-
-    void checkAllCardSlots() {
-        checkCard(cardName1, tarotCard1, cardMeaning1);
-        checkCard(cardName2, tarotCard2, cardMeaning2);
-        checkCard(cardName3, tarotCard3, cardMeaning3);
-    }
-
-    void checkCard(Text name, ImageView image, Text meaning) {
-        System.out.println(name.getText());
-        System.out.println("    Meaning: " + meaning.getText());
-        System.out.println("    Image URL: " + image.getImage().getUrl());
-    }
-
-    void printAllCards() {
-        System.out.println();
-        System.out.println("All of the cards loaded into the Tarot Card Reader");
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        for (tarotCard card : cards) {
-            card.print();
-        }
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        System.out.println();
     }
 
 }
