@@ -38,15 +38,6 @@ public class FortunesController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
 
-        // URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        // if (defaultCSS != null) {
-        //     String defCSS = defaultCSS.toExternalForm();
-        //     scene.getStylesheets().add(defCSS);
-
-        // } else {
-        //     System.out.println("Error: defaults.css not found");
-        // }
-
         stage.setScene(scene);
         stage.show();
     }
@@ -61,15 +52,6 @@ public class FortunesController {
         root = FXMLLoader.load(getClass().getResource("tarotCard.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-
-        // URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        // if (defaultCSS != null) {
-        //     String defCSS = defaultCSS.toExternalForm();
-        //     scene.getStylesheets().add(defCSS);
-
-        // } else {
-        //     System.out.println("Error: defaults.css not found");
-        // }
 
         stage.setScene(scene);
         stage.show();
@@ -86,15 +68,6 @@ public class FortunesController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
 
-        // URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        // if (defaultCSS != null) {
-        //     String defCSS = defaultCSS.toExternalForm();
-        //     scene.getStylesheets().add(defCSS);
-
-        // } else {
-        //     System.out.println("Error: defaults.css not found");
-        // }
-
         stage.setScene(scene);
         stage.show();
     }
@@ -108,16 +81,6 @@ public class FortunesController {
         root = FXMLLoader.load(getClass().getResource("fortuneApp.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-
-        // // sets the css sheet to the scene
-        // URL css = this.getClass().getResource("/css/fortuneApp.css");
-        // if (css != null) {
-        //     String fortuneAppCSS = css.toExternalForm();
-        //     scene.getStylesheets().add(fortuneAppCSS);
-
-        // } else {
-        //     System.out.println("Error: fortuneApp.css not found");
-        // }
 
         stage.setScene(scene);
         stage.show();

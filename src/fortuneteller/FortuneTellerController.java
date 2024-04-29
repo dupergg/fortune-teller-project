@@ -1,6 +1,4 @@
 package fortuneteller;
-
-import java.net.URL;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -68,15 +66,6 @@ public class FortuneTellerController {
         root = FXMLLoader.load(getClass().getResource("fortunes.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-
-        // URL fortuneCSS = this.getClass().getResource("/css/fortunes.css");
-        // if (fortuneCSS != null) {
-        //     String fortCSS = fortuneCSS.toExternalForm();
-        //     scene.getStylesheets().add(fortCSS);
-
-        // } else {
-        //     System.out.println("Error: fortunes.css not found");
-        // }
 
         stage.setScene(scene);
         stage.show();

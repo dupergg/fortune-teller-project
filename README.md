@@ -47,6 +47,8 @@ button in VSCode. For the Fortune Teller part of the project to actually generat
 the "chatty.py" python script while the application is running. Do not stop it until you are done with the
 application.
 
+The programs may freeze while running the script, just wait for it to continue.
+
 ## Folder Structure
 
 The workspace contains two folders by default, where:

@@ -65,13 +65,3 @@ def fortune_api():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
-
-# while(True):
-#     prompt = input("Enter what type of fortune you want... Exaple 'wealth', or 'personnal' (or 'exit' to quit): ")
-#     if prompt.lower() == 'exit':
-#         break
-#     fortune = generate_fortune("your " + prompt + " fortune is")
-#     print()
-#     print("Madam Brigitte says ", end = "")
-#     print(fortune)
-#     print()

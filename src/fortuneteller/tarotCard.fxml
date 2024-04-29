@@ -129,7 +129,7 @@
                   </Text>
                </children>
             </VBox>
-            <CheckBox fx:id="checkbox" indeterminate="false" text="include reversed cards" textFill="#f7f4e5">
+            <CheckBox fx:id="checkbox" indeterminate="false" text="Include Reversed Cards" textFill="#f7f4e5">
                <font>
                    <Font name="System Bold" size="20.0" />
                </font>

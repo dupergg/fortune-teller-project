@@ -17,30 +17,19 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("fortuneApp.fxml"));
         Scene scene = new Scene(root);
-        
-        // sets the css sheet to the scene
-        // URL css = this.getClass().getResource("/css/fortuneApp.css");
-        // if (css != null) {
-        //     String fortuneAppCSS = css.toExternalForm();
-        //     scene.getStylesheets().add(fortuneAppCSS);
-
-        // } else {
-        //     System.out.println("Error: fortuneApp.css not found");
-        // }
 
         primaryStage.setTitle("Fortune Teller");
         primaryStage.getIcons().add(new Image("images/icon.png"));
         primaryStage.setScene(scene);
         primaryStage.show();
         primaryStage.setResizable(false);
-        music();
-        
+        music(); 
     }
 
     MediaPlayer mediaPlayer;
     public void music() {
         try {
-            URL musicResource = getClass().getResource("/fortuneteller/mystery.mp3");
+            URL musicResource = getClass().getResource("/fortuneteller/audio/mystery.mp3");
             if (musicResource != null) {
                 Media h = new Media(musicResource.toString());
                 mediaPlayer = new MediaPlayer(h);
@@ -48,7 +37,6 @@ public class App extends Application {
             } else {
                 showAlert("Error: Music file not found.");
             }
-            
         } catch (Exception e) {
             showAlert("Error: Failed to play music.");
             e.printStackTrace();

@@ -19,7 +19,7 @@
                <children>
                   <ImageView fitHeight="630.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@orb612.gif" />
+                        <Image url="@../images/orb612.gif" />
                      </image>
                      <VBox.margin>
                         <Insets />
