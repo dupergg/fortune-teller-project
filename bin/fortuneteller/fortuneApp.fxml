@@ -2,57 +2,54 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@../css/appStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fortuneteller.AppController">
    <children>
-      <VBox>
+      <ImageView fitHeight="734.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@title612.gif" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" layoutX="135.0" layoutY="610.0" prefHeight="117.0" prefWidth="332" spacing="10">
          <children>
-            <HBox alignment="CENTER" prefHeight="150.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fortune Teller" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="72.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="600.0" spacing="20.0">
-               <children>
-                  <Button fx:id="fortunesButton" mnemonicParsing="false" onAction="#fortunesButtonPressed" text="Fortunes">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="infoButton" mnemonicParsing="false" onAction="#infoButtonPressed" text="Info">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitButtonPressed" text="Exit">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Button>
-               </children>
+            <Button fx:id="fortunesButton" alignment="CENTER" mnemonicParsing="false" onAction="#fortunesButtonPressed" text="Fortunes">
+               <font>
+                  <Font size="40.0" />
+               </font>
                <VBox.margin>
-                  <Insets />
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin>
-            </VBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="50.0">
+            </Button>
+            <HBox alignment="CENTER" prefHeight="100">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Project by: Bryce Doperalski, Jared Guidry, Alanna Siebers, and Justin Zager">
+                  <Button fx:id="infoButton" alignment="CENTER" mnemonicParsing="false" onAction="#infoButtonPressed" text="Info">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
                      <HBox.margin>
-                        <Insets bottom="5.0" />
+                        <Insets bottom="2.0" left="2.0" right="15.0" top="2.0" />
                      </HBox.margin>
-                  </Text>
+                  </Button>
+                  <Button fx:id="exitButton" alignment="CENTER" mnemonicParsing="false" onAction="#exitButtonPressed" text="Exit">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="0.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
                </children>
             </HBox>
          </children>
       </VBox>
+
+      <Text layoutX="102.0" layoutY="782.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project by: Bryce Doperalski, Jared Guidry, Alanna Siebers, and Justin Zager" />
    </children>
 </Pane>

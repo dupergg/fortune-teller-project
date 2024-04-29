@@ -24,12 +24,12 @@
             </HBox>
             <VBox prefHeight="600.0" prefWidth="600.0">
                <children>
-                  <TextArea fx:id="outputTextArea" editable="false" focusTraversable="false" prefHeight="500.0" text="This is some text." wrapText="true">
+                  <TextArea fx:id="outputTextArea" editable="false" focusTraversable="false" text="" prefHeight="500.0" wrapText="true">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </TextArea>
-                  <TextArea fx:id="inputTextArea" editable="true" focusTraversable="true" prefHeight="100.0" text="put prompt here!" wrapText="true">
+                  <TextArea fx:id="inputTextArea" editable="true" focusTraversable="false" prefHeight="100.0" promptText="Put what type of fortune you want here, such as &quot;wealth&quot;" wrapText="true">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -38,14 +38,14 @@
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding></VBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="100.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" spacing="30">
                <children>
                   <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonPressed" text="Back">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Button>
-                  <Button fx:id="testButton" mnemonicParsing="false" onAction="#testButtonPressed" text="Test">
+                  <Button fx:id="testButton" mnemonicParsing="false" onAction="#testButtonPressed" text="Recieve Fortune">
                      <font>
                         <Font size="36.0" />
                      </font>

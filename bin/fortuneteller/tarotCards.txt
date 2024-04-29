@@ -23,7 +23,7 @@ The Star ~ images\\tarotCards\\thestar.jpg ~ hope, faith, rejuvenation ~ faithle
 The Moon ~ images\\tarotCards\\themoon.jpg ~ unconscious, illusions, intuition ~ confusion, fear, misinterpretation
 The Sun ~ images\\tarotCards\\thesun.jpg ~ joy, success, celebration, positivity ~ negativity, depression, sadness
 Judgement ~ images\\tarotCards\\judgement.jpg ~ reflection, reckoning, awakening ~ lack of self awareness, doubt, self loathing
-The World ~ images\\tarotCards\\theworld.jpg ~ fufillment, harmony, completion ~ incompletion, no closure
+The Universe ~ images\\tarotCards\\theworld.jpg ~ fufillment, harmony, completion ~ incompletion, no closure
 //
 // Suit of Swords
 Ace of Swords ~ images\\tarotCards\\aceofswords.jpg ~ breakthrough, clarity, sharp mind ~ confusion, brutality, chaos

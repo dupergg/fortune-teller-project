@@ -15,29 +15,29 @@
          <image>
             <Image url="@romani612.gif" />
          </image></ImageView>
-      <VBox layoutX="50.0" layoutY="686.0" prefHeight="100.0" prefWidth="499.0">
+      <VBox layoutX="50.0" layoutY="626.0" prefHeight="100.0" prefWidth="499.0" spacing="30">
          <children>
-            <HBox prefHeight="49.0" prefWidth="521.0">
+            <HBox alignment="CENTER" prefHeight="49.0" prefWidth="521.0" spacing="10">
                <children>
                   <Button fx:id="fortuneTellerButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fortuneTellerButtonPressed" prefHeight="50.0" prefWidth="150.0" text="Fortune Teller" textAlignment="CENTER">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="20.0" />
                      </font>
                      <HBox.margin>
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="tarotCardButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#tarotCardButtonPressed" prefHeight="50.0" prefWidth="150.0" text="Tarot Card" textAlignment="CENTER">
+                  <Button fx:id="tarotCardButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#tarotCardButtonPressed" prefHeight="50.0" prefWidth="150.0" text="Tarot Cards" textAlignment="CENTER">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="20.0" />
                      </font>
                      <HBox.margin>
                         <Insets top="2.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="eightBallButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#eightBallButtonPressed" prefHeight="50.0" prefWidth="200.0" text="Magic Orb" textAlignment="CENTER">
+                  <Button fx:id="eightBallButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#eightBallButtonPressed" prefHeight="50.0" prefWidth="150.0" text="Magic Orb" textAlignment="CENTER">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="20.0" />
                      </font>
                      <HBox.margin>
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
@@ -45,7 +45,7 @@
                   </Button>
                </children>
             </HBox>
-            <HBox prefHeight="26.0" prefWidth="500.0">
+            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="500.0">
                <children>
                   <Button fx:id="backButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="50.0" prefWidth="150.0" text="Back">
                      <font>

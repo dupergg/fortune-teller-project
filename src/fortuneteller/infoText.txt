@@ -1,1 +1,1 @@
-This program allows users to receive a fortune in any way that they desire.
+This program provides three different types of fortunes. The first is the Fortune Teller, where you can ask for predictions on things such as your wealth. The second is a Tarot Card Reader, where you can get a traditional past-present-future tarot card reading. The third is the Magic Orb, where you can ask a question and it will provide a simple response.

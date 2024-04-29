@@ -93,7 +93,7 @@
                   </VBox>
                </children>
                <padding>
-                  <Insets left="10.0" bottom="10" top="10" />
+                  <Insets left="12.0" bottom="10" top="10" />
                </padding>
             </HBox>
             <VBox prefHeight="235" alignment="CENTER">
@@ -129,6 +129,9 @@
                      </font>
                   </Text>
                </children>
+               <padding>
+                  <Insets left="10" />
+               </padding>
             </VBox>
             <CheckBox fx:id="checkbox" indeterminate="false" text="include reversed cards">
                <font>
@@ -139,15 +142,15 @@
                <children>
                   <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonPressed" text="Back">
                      <font>
-                        <Font size="36.0" />
+                        <Font size="30.0" />
                      </font>
                      <HBox.margin>
-                        <Insets right="30.0" />
+                        <Insets right="70.0" />
                      </HBox.margin>
                   </Button>
                   <Button fx:id="readButton" mnemonicParsing="false" onAction="#tarotReading" text="Give Reading">
                      <font>
-                        <Font size="36.0" />
+                        <Font size="30.0" />
                      </font>
                   </Button>
                </children>
