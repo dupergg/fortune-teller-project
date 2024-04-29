@@ -127,22 +127,13 @@ public class TarotCardController {
         scene = new Scene(root);
 
         // sets the css sheet to the scene
-        URL css = this.getClass().getResource("/css/appStyle.css");
-        if (css != null) {
-            String appCSS = css.toExternalForm();
-            scene.getStylesheets().add(appCSS);
+        URL fortuneCSS = this.getClass().getResource("/css/fortunes.css");
+        if (fortuneCSS != null) {
+            String fortCSS = fortuneCSS.toExternalForm();
+            scene.getStylesheets().add(fortCSS);
 
         } else {
-            System.out.println("Error: appStyle.css not found");
-        }
-
-        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        if (defaultCSS != null) {
-            String defCSS = defaultCSS.toExternalForm();
-            scene.getStylesheets().add(defCSS);
-
-        } else {
-            System.out.println("Error: defaults.css not found");
+            System.out.println("Error: fortunes.css not found");
         }
 
         stage.setScene(scene);

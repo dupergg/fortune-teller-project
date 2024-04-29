@@ -1,7 +1,7 @@
 package fortuneteller;
 
 import java.io.IOException;
-import java.net.URL;
+// import java.net.URL;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,14 +38,14 @@ public class FortunesController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
 
-        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        if (defaultCSS != null) {
-            String defCSS = defaultCSS.toExternalForm();
-            scene.getStylesheets().add(defCSS);
+        // URL defaultCSS = this.getClass().getResource("/css/defaults.css");
+        // if (defaultCSS != null) {
+        //     String defCSS = defaultCSS.toExternalForm();
+        //     scene.getStylesheets().add(defCSS);
 
-        } else {
-            System.out.println("Error: defaults.css not found");
-        }
+        // } else {
+        //     System.out.println("Error: defaults.css not found");
+        // }
 
         stage.setScene(scene);
         stage.show();
@@ -62,14 +62,14 @@ public class FortunesController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
 
-        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        if (defaultCSS != null) {
-            String defCSS = defaultCSS.toExternalForm();
-            scene.getStylesheets().add(defCSS);
+        // URL defaultCSS = this.getClass().getResource("/css/defaults.css");
+        // if (defaultCSS != null) {
+        //     String defCSS = defaultCSS.toExternalForm();
+        //     scene.getStylesheets().add(defCSS);
 
-        } else {
-            System.out.println("Error: defaults.css not found");
-        }
+        // } else {
+        //     System.out.println("Error: defaults.css not found");
+        // }
 
         stage.setScene(scene);
         stage.show();
@@ -86,14 +86,14 @@ public class FortunesController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
 
-        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        if (defaultCSS != null) {
-            String defCSS = defaultCSS.toExternalForm();
-            scene.getStylesheets().add(defCSS);
+        // URL defaultCSS = this.getClass().getResource("/css/defaults.css");
+        // if (defaultCSS != null) {
+        //     String defCSS = defaultCSS.toExternalForm();
+        //     scene.getStylesheets().add(defCSS);
 
-        } else {
-            System.out.println("Error: defaults.css not found");
-        }
+        // } else {
+        //     System.out.println("Error: defaults.css not found");
+        // }
 
         stage.setScene(scene);
         stage.show();
@@ -109,27 +109,17 @@ public class FortunesController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
 
-        // sets the css sheet to the scene
-        URL css = this.getClass().getResource("/css/appStyle.css");
-        if (css != null) {
-            String appCSS = css.toExternalForm();
-            scene.getStylesheets().add(appCSS);
+        // // sets the css sheet to the scene
+        // URL css = this.getClass().getResource("/css/fortuneApp.css");
+        // if (css != null) {
+        //     String fortuneAppCSS = css.toExternalForm();
+        //     scene.getStylesheets().add(fortuneAppCSS);
 
-        } else {
-            System.out.println("Error: appStyle.css not found");
-        }
-
-        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        if (defaultCSS != null) {
-            String defCSS = defaultCSS.toExternalForm();
-            scene.getStylesheets().add(defCSS);
-
-        } else {
-            System.out.println("Error: defaults.css not found");
-        }
+        // } else {
+        //     System.out.println("Error: fortuneApp.css not found");
+        // }
 
         stage.setScene(scene);
         stage.show();
     }
-
 }

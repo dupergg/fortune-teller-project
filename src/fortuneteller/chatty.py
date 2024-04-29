@@ -38,7 +38,7 @@ def generate_fortune(prompt_text, max_length=25):
         generated_sequence = output_sequences[0].tolist()
         text = tokenizer.decode(generated_sequence, clean_up_tokenization_spaces=True)
 
-        redo_chars = ['said']
+        redo_chars = ['said', 'says']
         if any(redo_word in text for redo_word in redo_chars):
             continue
 

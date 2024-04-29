@@ -37,22 +37,13 @@ public class InfoController implements Initializable {
         scene = new Scene(root);
 
         // sets the css sheet to the scene
-        URL css = this.getClass().getResource("/css/appStyle.css");
+        URL css = this.getClass().getResource("/css/fortuneApp.css");
         if (css != null) {
-            String appCSS = css.toExternalForm();
-            scene.getStylesheets().add(appCSS);
+            String fortuneAppCSS = css.toExternalForm();
+            scene.getStylesheets().add(fortuneAppCSS);
 
         } else {
-            System.out.println("Error: appStyle.css not found");
-        }
-
-        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        if (defaultCSS != null) {
-            String defCSS = defaultCSS.toExternalForm();
-            scene.getStylesheets().add(defCSS);
-
-        } else {
-            System.out.println("Error: defaults.css not found");
+            System.out.println("Error: fortuneApp.css not found");
         }
 
         stage.setScene(scene);

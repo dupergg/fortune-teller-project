@@ -14,9 +14,11 @@ using the GitHub Desktop app for ease of use.
 If you are using Visual Studio Code, you will need to change your JavaFX path in the `launch.json` under the
 `.vscode` folder.
 
-This is found under "vmaArgs".
+This is found under "vmArgs".
 
 This is a sample [launch file](https://github.com/openjfx/samples/blob/master/IDE/VSCode/Non-Modular/Java/hellofx/.vscode/launch.json) that was used.
+
+To have the music work for the project, add "javafx.media" to the vmArgs.
 
 Under "Referenced Libraries", navigate to where JavaFX was installed and find the "lib" folder. Highlight and select all of the `.jar` files.
 
@@ -26,36 +28,24 @@ If you are using another IDE, I suggest reading over the tutorial above to set u
 Python 3.8 is required for this project currently. This is for the chat bot that gives a fortune to the user.
 The Python folder needs to be added to the PATH environment variable in Windows.
 
-For this project, we are using a translation library name "Jep" to translate our python chat bot so the Java program can use it.
-To install this run `python -m pip install jep` in Windows Powershell.
+Our Python script to generate fortunes for the user when they give it a prompt requires a few libraries be downloaded.
+Three libraries, `transformers`, `torch`, and `flask` must be downloaded for the generator to work.
+The three following commands will download the libraries.
 
-Add the `.jar` file for jep, which can be found at `C:\Users\USER\AppData\Local\Programs\Python\Python38\Lib\site-packages\jep` to "Referenced Libraries" in Visual Studio Code.
-
-For this version of the project, we are using a library called ChatterBot. The implementation is very basic and will be changed to another
-chat bot in the future.
-
-To install ChatterBot, use the command `python -m pip install chatterbot`
-
-Go to `C:\Users\USER\AppData\Local\Programs\Python\Python38\Lib\site-packages\chatterbot` and open the `tagging.py` file.
-
-Change 
 ```
-self.nlp = spacy.load(self.language.ISO_639_1.lower())
-```
-to
-```
-if self.language.ISO_639_1.lower() == 'en':
-    self.nlp = spacy.load('en_core_web_lg')
-else:
-    self.nlp = spacy.load(self.language.ISO_639_1.lower())
-```
-This is a workaround for an issue with a library that ChatterBot uses.
+python -m pip install transformers
 
-Next, run the command `python -m pip install spacy` and then run the command `python -m spacy download en_core_web_lg`
+python -m pip install torch
 
-Lastly, put the directory paths of SpaCy and Jep into the PATH environment variable in Windows and move them up closer to the top of the list,
-above the Python path.
-These can be found at `C:\Users\USER\AppData\Local\Programs\Python\Python38\Lib\site-packages\jep` and `C:\Users\USER\AppData\Local\Programs\Python\Python38\Lib\site-packages\spacy`
+python -m pip install flask
+```
+
+## How to Use/Launch the Project
+
+If everything is all set up following the above instructions, you should be able to press the "Launch App"
+button in VSCode. For the Fortune Teller part of the project to actually generate responses, you must run
+the "chatty.py" python script while the application is running. Do not stop it until you are done with the
+application.
 
 ## Folder Structure
 

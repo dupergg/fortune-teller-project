@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@../css/appStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fortuneteller.AppController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@../css/fortuneApp.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fortuneteller.AppController">
    <children>
       <ImageView fitHeight="734.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -44,6 +44,6 @@
             </Button>
          </children>
       </VBox>
-      <Text layoutX="102.0" layoutY="782.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project by: Bryce Doperalski, Jared Guidry, Alanna Siebers, and Justin Zager" />
+      <Text fill="WHITE" layoutX="102.0" layoutY="782.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project by: Bryce Doperalski, Jared Guidry, Alanna Siebers, and Justin Zager" />
    </children>
 </Pane>

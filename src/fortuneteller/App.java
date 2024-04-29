@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
-
 public class App extends Application {
 
     @Override
@@ -20,30 +19,21 @@ public class App extends Application {
         Scene scene = new Scene(root);
         
         // sets the css sheet to the scene
-        URL css = this.getClass().getResource("/css/appStyle.css");
-        if (css != null) {
-            String appCSS = css.toExternalForm();
-            scene.getStylesheets().add(appCSS);
+        // URL css = this.getClass().getResource("/css/fortuneApp.css");
+        // if (css != null) {
+        //     String fortuneAppCSS = css.toExternalForm();
+        //     scene.getStylesheets().add(fortuneAppCSS);
 
-        } else {
-            System.out.println("Error: appStyle.css not found");
-        }
-
-        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        if (defaultCSS != null) {
-            String defCSS = defaultCSS.toExternalForm();
-            scene.getStylesheets().add(defCSS);
-
-        } else {
-            System.out.println("Error: defaults.css not found");
-        }
+        // } else {
+        //     System.out.println("Error: fortuneApp.css not found");
+        // }
 
         primaryStage.setTitle("Fortune Teller");
         primaryStage.getIcons().add(new Image("images/icon.png"));
         primaryStage.setScene(scene);
         primaryStage.show();
         primaryStage.setResizable(false);
-        //music();
+        music();
         
     }
 
@@ -70,8 +60,6 @@ public class App extends Application {
         alert.setContentText(message);
         alert.show();
     }
-
-    
 
     public static void main(String[] args) {
         launch(args);

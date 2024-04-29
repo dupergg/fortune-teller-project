@@ -1,0 +1,25 @@
+.root { 
+	-fx-background-color: #313d46; 
+}
+
+.button:hover { 
+	-fx-background-color: #3194c3;
+}
+
+.button { 
+	-fx-background-color: #182645;
+	-fx-background-radius: 10px; 
+	-fx-text-base-color: #98f8fe;
+}
+
+.text-area .content {
+	-fx-background-color: #fef0ca;
+}
+
+.text-area:empty .text {
+	-fx-text-inner-color: #262626;
+}
+
+.text-area {
+	-fx-text-inner-color: #000000;
+}

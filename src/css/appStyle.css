@@ -1,17 +1,1 @@
-/*
-
-.button {
-    -fx-background-color: #000000;
-    -fx-text-base-color: #ffffff;
-    -fx-background-radius: 10px;
-}
-
-.button:hover {
-    -fx-background-color: #505050;
-}
-
-.root {
-    -fx-background-color: #e0b9db;
-}
-
-*/
+/* This file is just here so the command line does not spit errors */

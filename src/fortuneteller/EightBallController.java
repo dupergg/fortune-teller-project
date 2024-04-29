@@ -156,14 +156,14 @@ public class EightBallController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
 
-        URL defaultCSS = this.getClass().getResource("/css/defaults.css");
-        if (defaultCSS != null) {
-            String defCSS = defaultCSS.toExternalForm();
-            scene.getStylesheets().add(defCSS);
+        // URL fortuneCSS = this.getClass().getResource("/css/fortunes.css");
+        // if (fortuneCSS != null) {
+        //     String fortCSS = fortuneCSS.toExternalForm();
+        //     scene.getStylesheets().add(fortCSS);
 
-        } else {
-            System.out.println("Error: defaults.css not found");
-        }
+        // } else {
+        //     System.out.println("Error: fortunes.css not found");
+        // }
 
         stage.setScene(scene);
         stage.show();
