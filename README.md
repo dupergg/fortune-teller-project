@@ -1,3 +1,7 @@
+## Project Video
+Since we cannot build our project, we want to show that the program does in fact work.
+This YouTube [video](https://youtu.be/UejwqvaXFiw) shows our project working.
+
 ## Getting Started
 
 To start working on the project, you will need to download JavaFX from this [website](https://gluonhq.com/products/javafx/) Make sure you are using JavaFX version 21.0.2.
